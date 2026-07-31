@@ -34,12 +34,10 @@ public class BankAccount {
         balance += amount;
     }
 
-    public void withdraw(double amount)
-            throws InsufficientBalanceException {
+    public void withdraw(double amount) throws InsufficientBalanceException {
 
         if(amount > balance) {
-            throw new InsufficientBalanceException(
-                    "Insufficient Balance");
+            throw new InsufficientBalanceException("Insufficient Balance");
         }
 
         balance -= amount;
